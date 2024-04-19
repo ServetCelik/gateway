@@ -35,11 +35,14 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASS}}
-
-
-    - name: Build and push
-      uses: docker/build-push-action@v5
-      with:
         push: true
         file: Dockerfile
         tags: servetc/gateway:latest
+
+
+#    - name: Build and push
+#      uses: docker/build-push-action@v5
+#      with:
+#        push: true
+#        file: Dockerfile
+#        tags: servetc/gateway:latest
